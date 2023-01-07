@@ -76,13 +76,8 @@ public class PessoaJuridica extends Conta {
                 extrato();
                 break;
             case "5": 
-                incerteza++;
-                if (incerteza == 1) {
-                    System.out.println("Você pressionou [5]. Para ter certeza de que não foi um acidente, pressione outra tecla.");
-                }
-                else {
-                    System.out.println("Sistema encerrado.");
-                }
+                System.out.println("Sistema encerrado.");
+                break;
             default:
                 System.out.println("Opção inválida");
                 System.out.println("");
