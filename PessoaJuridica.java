@@ -53,7 +53,6 @@ public class PessoaJuridica extends Conta {
         System.out.print("Opção: ");
     }
     
-    int incerteza = 0;
     public void escolheFuncao(String funcao){
         double valor;
         switch(funcao){
