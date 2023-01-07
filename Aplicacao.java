@@ -32,12 +32,11 @@ public class Aplicacao {
                     tipo_conta = sc.next();
                     minhaContaFisica.escolheContaFisica(tipo_conta);
                 } while(!tipo_conta.equals("1") && !tipo_conta.equals("2") && !tipo_conta.equals("3"));
-                switch(tipo_conta) {
-                    case "1":
-                    case "2":
-                        minhaContaFisica.funcionalidades(); 
-                    case "3":
-                        minhaContaFisica.funcionalidadesInvestimento();
+                if(tipo_conta.equals("1") || tipo_conta.equals("2")) {
+                    minhaContaFisica.funcionalidades();
+                }
+                if(tipo_conta.equals("3")) {
+                    minhaContaFisica.funcionalidadesInvestimento();
                 }
                 break;
             case "2":
@@ -47,11 +46,11 @@ public class Aplicacao {
                     tipo_conta = sc.next();
                     minhaContaJuridica.escolheContaJuridica(tipo_conta);
                 } while(!tipo_conta.equals("1") && !tipo_conta.equals("2"));
-                switch(tipo_conta) {
-                    case "1":
-                        minhaContaJuridica.funcionalidades(); 
-                    case "2":
-                        minhaContaJuridica.funcionalidadesInvestimento();
+                if(tipo_conta.equals("1")) {
+                    minhaContaJuridica.funcionalidades();
+                }
+                if(tipo_conta.equals("2")) {
+                    minhaContaJuridica.funcionalidadesInvestimento();
                 }
                 break;
         }
