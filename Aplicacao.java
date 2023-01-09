@@ -14,13 +14,25 @@ public class Aplicacao {
         numero = sc.nextInt();
         System.out.print("Entre com o valor inicial depositado na conta: ");
         saldo = sc.nextDouble();
-        
-        Conta minha_conta = new Conta(nome, numero, saldo);
+
         String pessoa;
         do {
-            minha_conta.exibePessoas();
+            System.out.println("\t Escolha o tipo de pessoa que você deseja entrar como: ");
+            System.out.println("1 - Pessoa Física");
+            System.out.println("2 - Pessoa Jurídica");
             pessoa = sc.next();
-            minha_conta.escolhePessoa(pessoa);
+            switch(pessoa){
+                case "1":
+                    System.out.print("Você escolheu pessoa física.\n");
+                    System.out.println("");
+                    break;
+                case "2":
+                    System.out.print("Você escolheu pessoa jurídica.\n");
+                    System.out.println("");
+                    break;
+                default:
+                    System.out.println("Opção inválida");
+                    System.out.println("");
         } while(!pessoa.equals("1") && !pessoa.equals("2"));
         
         String tipo_conta;
