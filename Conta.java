@@ -6,13 +6,13 @@ public class Conta {
     private double saldo, investido;
     Scanner sc = new Scanner(System.in);
     
-    public String getNome() { return nome; }
+    	public String getNome() { return nome; }
 	public void setNome(String nome) { this.nome = nome; }
-    public int getNumero() { return numero; }
+    	public int getNumero() { return numero; }
 	public void setNumero(int saldo) { this.numero = numero; }
 	public int getSaques() { return saques; }
 	public void setSaques(int saques) { this.saques = saques; }
-    public double getSaldo() { return saldo; }
+    	public double getSaldo() { return saldo; }
 	public void setSaldo(double saldo) { this.saldo = saldo; }
 	public double getInvestido() { return investido; }
 	public void setInvestido(double investido) { this.investido = investido; }
@@ -21,28 +21,7 @@ public class Conta {
         this.nome = nome;
         this.numero = numero;
         this.saldo = saldo;
-    }
-	
-	public void exibePessoas(){
-        System.out.println("\t Escolha o tipo de pessoa que você deseja entrar como: ");
-        System.out.println("1 - Pessoa Física");
-        System.out.println("2 - Pessoa Jurídica");
-    }    
-    public void escolhePessoa(String pessoa){
-        switch(pessoa){
-            case "1":
-                System.out.print("Você escolheu pessoa física.\n");
-                System.out.println("");
-                break;
-            case "2":
-                System.out.print("Você escolheu pessoa jurídica.\n");
-                System.out.println("");
-                break;
-            default:
-                System.out.println("Opção inválida");
-                System.out.println("");
-        }
-    }
+    }	
     
     public void sacar(double valor){
         if(saldo >= valor){
