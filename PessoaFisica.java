@@ -2,14 +2,14 @@ public class PessoaFisica extends Conta {
     public PessoaFisica(String nome, int numero, double saldo){
         super(nome, numero, saldo);
     }
-    
+
     public void exibeContaFisica(){
         System.out.println("\t Escolha o tipo de conta que você quer abrir:");
         System.out.println("1 - Conta Corrente");
         System.out.println("2 - Conta Poupança");
         System.out.println("3 - Conta Investimento");
-    }    
-    
+    }
+
     public void escolheContaFisica(String tipo_conta){
         switch(tipo_conta){
             case "1":
@@ -29,7 +29,7 @@ public class PessoaFisica extends Conta {
                 System.out.println("");
         }
     }
-    
+
     public void funcionalidades() {
         String funcao;
         do {
@@ -38,7 +38,7 @@ public class PessoaFisica extends Conta {
             escolheFuncao(funcao);
         } while(!funcao.equals("5"));
     }
-    
+
     public void funcionalidadesInvestimento() {
         String funcao;
         do {
@@ -69,7 +69,7 @@ public class PessoaFisica extends Conta {
             case "4":
                 extrato();
                 break;
-            case "5": 
+            case "5":
                 System.out.println("Sistema encerrado.");
                 break;
             default:
@@ -77,7 +77,7 @@ public class PessoaFisica extends Conta {
                 System.out.println("");
         }
     }
-    
+
     public void exibeMenu(){
         System.out.println("\t Escolha a opção desejada");
         System.out.println("1 - Sacar");
@@ -87,7 +87,7 @@ public class PessoaFisica extends Conta {
         System.out.println("5 - Sair\n");
         System.out.print("Opção: ");
     }
-    
+
     public void escolheFuncaoInvestimento(String funcao){
         double valor;
         switch(funcao){
@@ -109,7 +109,7 @@ public class PessoaFisica extends Conta {
             case "4":
                 extratoInvestimento();
                 break;
-            case "5": 
+            case "5":
                 System.out.println("Sistema encerrado.");
                 break;
             default:
@@ -117,7 +117,7 @@ public class PessoaFisica extends Conta {
                 System.out.println("");
         }
     }
-    
+
     public void exibeMenuInvestimento(){
         System.out.println("\t Escolha a opção desejada");
         System.out.println("1 - Investir");
