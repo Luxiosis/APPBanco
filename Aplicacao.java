@@ -6,7 +6,7 @@ public class Aplicacao {
         int numero;
         double saldo;
         Scanner sc = new Scanner(System.in);
-        
+
         System.out.println("Olá cliente.");
         System.out.print("Digite seu nome: ");
         nome = sc.nextLine();
@@ -33,8 +33,9 @@ public class Aplicacao {
                 default:
                     System.out.println("Opção inválida");
                     System.out.println("");
+            }
         } while(!pessoa.equals("1") && !pessoa.equals("2"));
-        
+
         String tipo_conta;
         switch(pessoa) {
             case "1":
